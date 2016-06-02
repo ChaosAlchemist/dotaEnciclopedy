@@ -24,6 +24,7 @@ public class Data {
     // Constantes de Nombres
     public final int NOMBRE = 1;
     public final int TITULO = 2;
+    public final int RUTA = 3;
 
     // Constantes Doubles
     public final double REGEN_HP = 1;
@@ -87,14 +88,17 @@ public class Data {
      * @return Este método devuelve el Nombre y el Título del héroe.
      * @throws SQLException
      */
-    public String getNombres(int id, int tipo) throws SQLException {
+    public String getHeroeStrings(int id, int tipo) throws SQLException {
         String nombre = "";
         if (tipo == NOMBRE) {
             q = "select nombre from heroes where id = " + id;
             // De lo contrario devuelve TÍTULO
-        } else {
+        } else if (tipo == TITULO) {
             q = "select titulo from heroes where id = " + id;
+        } else if (tipo == RUTA) {
+            q = "select ruta from heroes where id = " + id;
         }
+
         rs = c.ejecutarSelect(q);
 
         if (rs.next()) {
@@ -102,22 +106,6 @@ public class Data {
         }
         c.desconectar();
         return nombre;
-    }
-
-    public String getRecursos(int id, int recurso) throws SQLException {
-        String recursoStr = "";
-        if (recurso == IMAGEN) {
-            q = "select imagen from heroes where id = " + id;
-        } else {
-            q = "select audio from heroes where id =" + id;
-        }
-        rs = c.ejecutarSelect(q);
-        if (rs.next()) {
-            recursoStr = rs.getString(1);
-        }
-        c.desconectar();
-        
-        return recursoStr;
     }
 
     public int getEstadisticas(int id, int stat) throws SQLException {

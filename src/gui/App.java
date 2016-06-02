@@ -937,9 +937,9 @@ public class App extends javax.swing.JFrame {
 
             Heroe h = d.getHeroe(id);
             lblHeroeNombre.setText(
-                    d.getNombres(id, d.NOMBRE)
+                    d.getHeroeStrings(id, d.NOMBRE)
                     + ", the "
-                    + d.getNombres(id, d.TITULO));
+                    + d.getHeroeStrings(id, d.TITULO));
 
             d.actualizarStats(id);
             
@@ -963,7 +963,7 @@ public class App extends javax.swing.JFrame {
             cargarEstadisticasAdv(id);
 
             lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                    "/resource/heroes/" + d.getRecursos(id,d.IMAGEN))));
+                    "/resource/heroes/" + d.getHeroeStrings(id,d.RUTA)+".png")));
 
         } catch (SQLException ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
@@ -984,8 +984,8 @@ public class App extends javax.swing.JFrame {
         lblIntNivel.setText(String.valueOf(intNivel));
         
         lblMiniHeroe.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                "/resource/heroes/miniheroes/" + d.getRecursos(id,d.IMAGEN))));
-        lblMiniNombre.setText(d.getNombres(id, d.NOMBRE));
+                "/resource/heroes/miniheroes/" + d.getHeroeStrings(id,d.RUTA)+".png")));
+        lblMiniNombre.setText(d.getHeroeStrings(id, d.NOMBRE));
         lblMiniNivel.setText("Nivel: "+d.getNivel(id));
     }
 
@@ -1006,7 +1006,7 @@ public class App extends javax.swing.JFrame {
         Heroe h = d.getHeroe(id);
         InputStream linea;
         try {
-            linea = new FileInputStream(new File("src\\resource\\audio\\" + d.getRecursos(id,d.AUDIO)));
+            linea = new FileInputStream(new File("src\\resource\\audio\\" + d.getHeroeStrings(id, d.RUTA)+".wav"));
             AudioStream audio = new AudioStream(linea);
             AudioPlayer.player.start(audio);
         } catch (FileNotFoundException ex) {
