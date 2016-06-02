@@ -19,7 +19,8 @@ public class Data {
     public final int VIDA = 4;
     public final int MANA = 5;
     public final int VELOCIDAD = 6;
-    public final int NIVEL = 7;
+    public final int ARMADURA = 7;
+    public final int NIVEL = 8;
 
     // Constantes de Nombres
     public final int NOMBRE = 1;
@@ -121,6 +122,8 @@ public class Data {
             q = "select mana from estadisticas where idHeroe = " + id;
         } else if (stat == VELOCIDAD) {
             q = "select velocidad from estadisticas where idHeroe = " + id;
+        }else if (stat == ARMADURA){
+            q = "select armadura from estadisticas where idHeroe = " + id;
         } else {
             q = "select nivel from estadisticas where idHeroe = " + id;
         }

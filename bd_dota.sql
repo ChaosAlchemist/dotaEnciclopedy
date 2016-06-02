@@ -193,6 +193,16 @@ insert into estadisticas values(null,28,1,200,50,295,21,17,18,3.38,0.25,0.01,2.9
 insert into estadisticas values(null,29,1,200,50,310,22,12,16,2.68,0.25,0.01,2.9,1.4,1.8,false);
 insert into estadisticas values(null,30,1,200,50,315,24,14,23,2.96,0.25,0.01,2.3,1.5,1.6,false);
 
+insert into estadisticas values(null,31,1,200,50,310,19,22,20,1.08,0.75,0.01,2,1.8,1.8,false);
+insert into estadisticas values(null,32,1,200,50,335,16,19,16,0.66,0.25,0.01,1,1.8,2.8,false);
+insert into estadisticas values(null,33,1,200,50,300,17,14,20,3.96,0.25,0.01,2.1,1,3.4,false);
+insert into estadisticas values(null,34,1,200,50,300,23,23,15,3.94,0.75,0.01,1.6,2.65,1.5,false);
+insert into estadisticas values(null,35,1,200,50,315,18,24,19,4.36,0.25,0.01,1.8,2.8,2.1,false);
+insert into estadisticas values(null,36,1,200,50,300,21,15,18,1.8,0.25,0.01,2.4,1.4,1.5,false);
+insert into estadisticas values(null,37,1,200,50,280,17,14,16,1.8,0.25,0.01,1.7,1.9,4,false);
+insert into estadisticas values(null,38,1,200,50,295,17,14,23,0,0.25,0.01,1.9,1.6,1.7,false);
+insert into estadisticas values(null,39,1,200,50,290,25,10,28,2.4,0.25,0.01,2.3,1.2,2.8,false);
+insert into estadisticas values(null,40,1,200,50,305,20,26,14,3.64,0.75,0.01,1.9,2.4,1.4,false);
 
 
 create table habilidades(
