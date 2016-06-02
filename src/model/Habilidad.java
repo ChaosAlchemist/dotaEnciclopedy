@@ -3,18 +3,20 @@ package model;
 public class Habilidad {
 
     private int id;
+    private int idHeroe;
+    private int idSlot;
     private String nombre;
-    private boolean esPasiva;
     private int mana;
     private int recarga;
 
     public Habilidad() {
     }
 
-    public Habilidad(int id, String nombre, boolean esPasiva, int mana, int recarga) {
+    public Habilidad(int id, int idHeroe, int idSlot, String nombre, int mana, int recarga) {
         this.id = id;
+        this.idHeroe = idHeroe;
+        this.idSlot = idSlot;
         this.nombre = nombre;
-        this.esPasiva = esPasiva;
         this.mana = mana;
         this.recarga = recarga;
     }
@@ -27,20 +29,28 @@ public class Habilidad {
         this.id = id;
     }
 
+    public int getIdHeroe() {
+        return idHeroe;
+    }
+
+    public void setIdHeroe(int idHeroe) {
+        this.idHeroe = idHeroe;
+    }
+
+    public int getIdSlot() {
+        return idSlot;
+    }
+
+    public void setIdSlot(int idSlot) {
+        this.idSlot = idSlot;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public boolean isEsPasiva() {
-        return esPasiva;
-    }
-
-    public void setEsPasiva(boolean esPasiva) {
-        this.esPasiva = esPasiva;
     }
 
     public int getMana() {
@@ -58,4 +68,5 @@ public class Habilidad {
     public void setRecarga(int recarga) {
         this.recarga = recarga;
     }
+
 }

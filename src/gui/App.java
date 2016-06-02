@@ -104,16 +104,24 @@ public class App extends javax.swing.JFrame {
         lblMana = new javax.swing.JLabel();
         lblHeroeNombre = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        lblHabilidadQ = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        lblHabilidadW = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        lblHabilidadE = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        lblHabilidadR = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         lblImagen = new javax.swing.JLabel();
         lblQuote = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabHeroes = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         btnMusica = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         mArchivo = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
@@ -436,8 +444,7 @@ public class App extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(800, 600));
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(800, 700));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Info. de Héroe"));
 
@@ -543,7 +550,7 @@ public class App extends javax.swing.JFrame {
                             .addComponent(btnAumentarNivel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnDisminuirNivel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(41, 41, 41)
-                        .addComponent(btnAvanzados, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                        .addComponent(btnAvanzados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(imgFuerza)
@@ -626,15 +633,80 @@ public class App extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Habilidades"));
 
+        lblHabilidadQ.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblHabilidadQ.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Q");
+        jLabel4.setToolTipText("");
+
+        lblHabilidadW.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblHabilidadW.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel18.setText("W");
+        jLabel18.setToolTipText("");
+
+        lblHabilidadE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblHabilidadE.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel23.setText("E");
+        jLabel23.setToolTipText("");
+
+        lblHabilidadR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblHabilidadR.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel27.setText("R");
+        jLabel27.setToolTipText("");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHabilidadQ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHabilidadW, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHabilidadE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHabilidadR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 127, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblHabilidadR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel23)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblHabilidadE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLabel18)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblHabilidadW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblHabilidadQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         lblImagen.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
@@ -703,21 +775,18 @@ public class App extends javax.swing.JFrame {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/iconos/logo.png"))); // NOI18N
 
-        jButton1.setText("Comprar Objetos");
-        jButton1.setEnabled(false);
-
-        jButton2.setText("Reiniciar Campos");
-        jButton2.setEnabled(false);
-
-        jButton3.setText("Iniciar Comparación");
-        jButton3.setEnabled(false);
-
         btnMusica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/iconos/audio.png"))); // NOI18N
         btnMusica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMusicaActionPerformed(evt);
             }
         });
+
+        jButton5.setText("Abrir Tienda");
+        jButton5.setEnabled(false);
+
+        jButton6.setText("Historia del Héroe");
+        jButton6.setEnabled(false);
 
         mArchivo.setText("Archivo");
 
@@ -752,6 +821,7 @@ public class App extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -759,10 +829,13 @@ public class App extends javax.swing.JFrame {
                                     .addComponent(jLabel14)
                                     .addGap(112, 112, 112)
                                     .addComponent(btnMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton3)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jButton5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton6))
+                                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -776,17 +849,17 @@ public class App extends javax.swing.JFrame {
                         .addGap(11, 11, 11)
                         .addComponent(jLabel14))
                     .addComponent(btnMusica))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(6, 6, 6)
-                .addComponent(jButton2)
-                .addGap(6, 6, 6)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addGap(72, 72, 72)
                 .addComponent(jLabel15)
                 .addGap(2, 2, 2)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1)
+                .addContainerGap())
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -904,10 +977,9 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel imgInt;
     private javax.swing.JLabel imgMiniHeroe;
     private javax.swing.JLabel imgVelocidad;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -916,15 +988,19 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -948,6 +1024,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblAgiAdv;
     private javax.swing.JLabel lblAgilidad;
@@ -955,6 +1032,10 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel lblArmadura;
     private javax.swing.JLabel lblFueAdv;
     private javax.swing.JLabel lblFuerza;
+    private javax.swing.JLabel lblHabilidadE;
+    private javax.swing.JLabel lblHabilidadQ;
+    private javax.swing.JLabel lblHabilidadR;
+    private javax.swing.JLabel lblHabilidadW;
     private javax.swing.JLabel lblHeroeNombre;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblIntAdv;
@@ -993,31 +1074,44 @@ public class App extends javax.swing.JFrame {
 
             d.actualizarStats(id);
             cargarEstadisticasAdv(id);
-            
+
             int fuerza = d.getEstadisticas(id, d.FUERZA);
             int agilidad = d.getEstadisticas(id, d.AGILIDAD);
             int inteligencia = d.getEstadisticas(id, d.INTELIGENCIA);
             int vida = d.getEstadisticas(id, d.VIDA);
             int mana = d.getEstadisticas(id, d.MANA);
-            int velocidad = d.getEstadisticas(id, d.VELOCIDAD);            
+            int velocidad = d.getEstadisticas(id, d.VELOCIDAD);
             int nivel = d.getEstadisticas(id, d.NIVEL);
-            
-            
+
             lblFuerza.setText(String.valueOf(fuerza));
             lblAgilidad.setText(String.valueOf(agilidad));
             lblInteligencia.setText(String.valueOf(inteligencia));
             lblVelocidad.setText(String.valueOf(velocidad));
-            
+
             lblVida.setText(String.valueOf(vida));
             lblMana.setText(String.valueOf(mana));
             lblNivel.setText(String.valueOf(nivel));
-            
+
             lblVelAdv.setText(String.valueOf(velocidad));
-
             
-
             lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                    "/resource/heroes/" + d.getHeroeStrings(id,d.RUTA)+".png")));
+                    "/resource/heroes/" + d.getHeroeStrings(id, d.RUTA) + ".png")));
+            if (id == 1) {
+                lblHabilidadQ.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                        "/resource/habilidades/" + d.getHabilidad(1, 1))));
+                lblHabilidadW.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                        "/resource/habilidades/" + d.getHabilidad(1, 2))));
+                lblHabilidadE.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                        "/resource/habilidades/" + d.getHabilidad(1, 3))));
+                lblHabilidadR.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                        "/resource/habilidades/" + d.getHabilidad(1, 4))));
+
+            } else {
+                lblHabilidadQ.setIcon(null);
+                lblHabilidadW.setIcon(null);
+                lblHabilidadE.setIcon(null);
+                lblHabilidadR.setIcon(null);
+            }
 
         } catch (SQLException ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
@@ -1034,17 +1128,17 @@ public class App extends javax.swing.JFrame {
 
         lblRHPAdv.setText(String.valueOf(regenHP));
         lblRMPAdv.setText(String.valueOf(regenMN));
-        lblFueAdv.setText(d.getEstadisticas(id, d.FUERZA)+" + "+ fuerzaNvl+"/nivel");
-        lblAgiAdv.setText(d.getEstadisticas(id, d.AGILIDAD)+" + "+ agilidadNvl+"/nivel");
-        lblIntAdv.setText(d.getEstadisticas(id, d.INTELIGENCIA)+" + "+ intNvl+"/nivel");
-        
+        lblFueAdv.setText(d.getEstadisticas(id, d.FUERZA) + " + " + fuerzaNvl + "/nivel");
+        lblAgiAdv.setText(d.getEstadisticas(id, d.AGILIDAD) + " + " + agilidadNvl + "/nivel");
+        lblIntAdv.setText(d.getEstadisticas(id, d.INTELIGENCIA) + " + " + intNvl + "/nivel");
+
         imgMiniHeroe.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                "/resource/heroes/miniheroes/" + d.getHeroeStrings(id,d.RUTA)+".png")));
+                "/resource/heroes/miniheroes/" + d.getHeroeStrings(id, d.RUTA) + ".png")));
         lblNmbAdv.setText(d.getHeroeStrings(id, d.NOMBRE));
         lblTtlAdv.setText(d.getHeroeStrings(id, d.TITULO)
-                +" de nivel "+d.getEstadisticas(id, d.NIVEL)); 
+                + " de nivel " + d.getEstadisticas(id, d.NIVEL));
         lblArmAdv.setText(String.valueOf(armadura));
-        
+
         lblArmadura.setText(String.valueOf(armadura));
     }
 
@@ -1065,7 +1159,7 @@ public class App extends javax.swing.JFrame {
         Heroe h = d.getHeroe(id);
         InputStream linea;
         try {
-            linea = new FileInputStream(new File("src\\resource\\audio\\" + d.getHeroeStrings(id, d.RUTA)+".wav"));
+            linea = new FileInputStream(new File("src\\resource\\audio\\" + d.getHeroeStrings(id, d.RUTA) + ".wav"));
             AudioStream audio = new AudioStream(linea);
             AudioPlayer.player.start(audio);
         } catch (FileNotFoundException ex) {

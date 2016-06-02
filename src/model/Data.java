@@ -161,6 +161,21 @@ public class Data {
         return stat;
     }
 
+    public String getHabilidad(int id, int hotkey) throws SQLException {
+        String imagen = null;
+        q = "select imagen from habilidades where idHeroe = '" + id + "' and idSlot = " + hotkey;
+
+        rs = c.ejecutarSelect(q);
+
+        if (rs.next()) {
+            imagen = rs.getString(1);
+        }
+
+        c.desconectar();
+        return imagen;
+
+    }
+
     public int actualizarStats(int id) throws SQLException {
         int vida = -15;
         q = "update estadisticas set vida = vida + (fuerza*20), mana = mana + (inteligencia*12), isCalculado = true where idHeroe ='" + id + "' and isCalculado = false";

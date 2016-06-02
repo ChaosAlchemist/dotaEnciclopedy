@@ -31,7 +31,7 @@ create table estadisticas(
 );
 
 
-/* 111 de 112 Héroes (Pit Lord aún no es oficialmente lanzado) */
+/* Todos los Héroes */
 
 insert into heroes values(1,'Abaddon','Lord of Avernus','abaddon');
 insert into heroes values(2,'Razzil Darkbrew','Alchemist','alchemist');
@@ -160,6 +160,7 @@ insert into heroes values(112,'Zeus','Lord of Heaven','zeus');
 
 
 /* Estadísticas de cada héroe */
+
 insert into estadisticas values(null,1,1,200,50,310,23,17,21,1.38,0.25,0.01,2.7,1.5,2,false);
 insert into estadisticas values(null,2,1,200,50,295,25,11,25,1.54,0.25,0.01,1.8,1.2,1.8,false);
 insert into estadisticas values(null,3,1,200,50,295,18,20,25,1.8,0.25,0.01,1.4,2.2,2.6,false);
@@ -215,15 +216,103 @@ insert into estadisticas values(null,48,1,200,50,290,16,15,20,1.1,0.25,0.01,1.7,
 insert into estadisticas values(null,49,1,200,50,325,17,24,13,3.36,0.5,0.01,2.1,2.7,1.4,false);
 insert into estadisticas values(null,50,1,200,50,330,15,18,16,4.08,0.25,0.01,2.2,3.3,1.85,false);
 
+insert into estadisticas values(null,51,1,200,50,305,22,16,17,3.24,0.25,0.01,3,1.9,1.55,false);
+insert into estadisticas values(null,52,1,200,50,315,21,15,19,4.1,0.25,0.01,2.75,2.5,1.65,false);
+insert into estadisticas values(null,53,1,200,50,290,14,20,19,1.8,0.25,0.01,1.65,2.5,1.85,false);
+insert into estadisticas values(null,54,1,200,50,315,23,23,20,4.22,0.25,0.01,1.6,1.9,1.6,false);
+insert into estadisticas values(null,55,1,200,50,300,17,20,17,1.8,0.25,0.01,1.85,3.3,1.65,false);
+insert into estadisticas values(null,56,1,200,50,285,19,24,17,0.66,0.25,0.01,2,3.4,1.5,false);
+insert into estadisticas values(null,57,1,200,50,320,21,21,21,5.94,0.75,0.01,2.3,2.75,2,false);
+insert into estadisticas values(null,58,1,200,50,295,19,18,25,3.52,0.25,0.01,1.8,1.9,2.9,false);
+insert into estadisticas values(null,59,1,200,50,290,16,15,22,5.22,0.25,0.01,2,1.7,2.5,false);
+insert into estadisticas values(null,60,1,200,50,295,23,18,16,5.52,2,0.01,2.8,2.25,1.6,false);
+
+insert into estadisticas values(null,61,1,200,50,300,18,19,18,3.66,3.5,0.01,2,2.2,2.1,false);
+insert into estadisticas values(null,62,1,200,50,295,23,14,17,7.96,3.5,0.01,3.2,1.55,2.4,false);
+insert into estadisticas values(null,63,1,200,50,305,20,15,17,5.1,0.25,0.01,2.65,1.75,1.8,false);
+insert into estadisticas values(null,64,1,200,50,305,18,15,23,2.1,0.25,0.01,1.9,1.7,2.9,false);
+insert into estadisticas values(null,65,1,200,50,315,19,24,26,5.36,0.25,0.01,2.3,2,2.7,false);
+insert into estadisticas values(null,66,1,200,50,310,20,23,15,4.22,0.25,0.01,1.85,3.15,1.4,false);
+insert into estadisticas values(null,67,1,200,50,290,21,29,21,4.06,0.75,0.01,1.7,2.6,2,false);
+insert into estadisticas values(null,68,1,200,50,290,19,12,18,0,0.25,0.01,2.9,1.3,1.8,false);
+insert into estadisticas values(null,69,1,200,50,305,25,12,17,3.68,0.25,0.01,2.6,1.3,2.6,false);
+insert into estadisticas values(null,70,1,200,50,295,15,22,24,2.08,0.25,0.01,1.7,1.7,2.4,false);
+
+insert into estadisticas values(null,71,1,200,50,285,25,14,14,0.96,0.25,0.01,3.2,1.5,1.5,false);
+insert into estadisticas values(null,72,1,200,50,330,17,16,26,1.24,0.25,0.01,1.2,1,4,false);
+insert into estadisticas values(null,73,1,200,50,295,16,18,24,1.52,0.25,0.01,1.7,2,2.5,false);
+insert into estadisticas values(null,74,1,200,50,295,21,22,19,2.08,0.25,0.01,2.3,2,1.8,false);
+insert into estadisticas values(null,75,1,200,50,300,17,34,14,4.76,0.25,0.01,1.6,2.2,1.3,false);
+insert into estadisticas values(null,76,1,200,50,290,19,14,27,0.96,0.25,0.01,1.5,1.6,2.4,false);
+insert into estadisticas values(null,77,1,200,50,300,21,19,16,2.66,0.25,0.01,2.6,2.1,1.8,false);
+insert into estadisticas values(null,78,1,200,50,295,17,18,23,2.52,0.25,0.01,1.9,2.2,2.7,false);
+insert into estadisticas values(null,79,1,200,50,305,15,20,18,0.8,0.5,0.01,2,2.9,2,false);
+insert into estadisticas values(null,80,1,200,50,285,21,16,21,1.24,0.25,0.01,1.8,1.6,3,false);
+
+insert into estadisticas values(null,81,1,200,50,295,17,16,27,1.24,0.25,0.01,2.2,3,2.5,false);
+insert into estadisticas values(null,82,1,200,50,325,19,13,27,0.52,0.25,0.01,1.5,0.8,3.6,false);
+insert into estadisticas values(null,83,1,200,50,295,21,17,15,5.38,0.25,0.01,2.8,2.4,1.5,false);
+insert into estadisticas values(null,84,1,200,50,305,21,26,16,1.1,0.25,0.01,1.8,1.5,1.9,false);
+insert into estadisticas values(null,85,1,200,50,290,16,21,15,1.94,0.25,0.01,1.7,2.5,2.6,false);
+insert into estadisticas values(null,86,1,200,50,295,19,23,16,3.22,0.25,0.01,2,1.8,1.9,false);
+insert into estadisticas values(null,87,1,200,50,290,23,17,14,5.38,0.75,0.01,2.4,1.7,1.8,false);
+insert into estadisticas values(null,88,1,200,50,285,19,22,24,5.08,0.25,0.01,1.5,1.8,3,false);
+insert into estadisticas values(null,89,1,200,50,290,23,21,16,4.94,0.25,0.01,2.7,2,1.3,false);
+insert into estadisticas values(null,90,1,200,50,270,17,14,22,6.96,0.25,0.01,2,1.3,2.9,false);
+
+insert into estadisticas values(null,91,1,200,50,305,18,23,20,4.22,0.25,0.01,2.1,2.7,2,false);
+insert into estadisticas values(null,92,1,200,50,315,15,22,19,8.22,2,0.01,1.4,3.2,1.75,false);
+insert into estadisticas values(null,93,1,200,50,310,22,15,16,3.1,0.25,0.01,3,1.5,1.7,false);
+insert into estadisticas values(null,94,1,200,50,290,22,21,16,0.24,0.25,0.01,2.1,1.8,2.4,false);
+insert into estadisticas values(null,95,1,200,50,305,17,13,30,3.82,0.25,0.01,2,1.2,2.2,false);
+insert into estadisticas values(null,96,1,200,50,285,26,9,17,0.26,0.25,0.01,3,0.9,1.6,false);
+insert into estadisticas values(null,97,1,200,50,300,25,15,17,1.1,0.25,0.01,3.3,2,1.8,false);
+insert into estadisticas values(null,98,1,200,50,300,17,21,13,1.94,0.25,0.01,2.2,2.75,1,false);
+insert into estadisticas values(null,99,1,200,50,305,23,23,18,3.22,0.25,0.01,2.3,2.1,1.7,false);
+
+insert into estadisticas values(null,100,1,200,50,310,22,10,27,3.4,0.25,0.01,2.1,0.8,2.5,false);
+insert into estadisticas values(null,101,1,200,50,310,23,18,16,5.52,0.25,0.01,2.7,2.1,1.5,false);
+insert into estadisticas values(null,102,1,200,50,300,18,27,13,3.78,0.25,0.01,2.6,3.3,1.5,false);
+insert into estadisticas values(null,103,1,200,50,285,18,22,18,3.08,0.25,0.01,1.85,2.6,1.75,false);
+insert into estadisticas values(null,104,1,200,50,385,20,21,15,1.94,0.25,0.01,1.9,2.9,1.8,false);
+insert into estadisticas values(null,105,1,200,50,290,22,11,21,0,0.25,0.01,2.4,1.3,2.5,false);
+insert into estadisticas values(null,106,1,200,50,295,22,10,24,2.4,0.25,0.01,2.5,1,2.7,false);
+insert into estadisticas values(null,107,1,200,50,290,15,14,15,0.96,0.25,0.01,1.5,2.5,1.8,false);
+insert into estadisticas values(null,108,1,200,50,295,15,17,22,1.38,0.25,0.01,2.5,1.4,2.6,false);
+insert into estadisticas values(null,109,1,200,50,285,24,16,25,1.24,0.25,0.01,2.1,1.9,3.1,false);
+insert into estadisticas values(null,110,1,200,50,305,16,13,24,0.82,0.25,0.01,1.8,1.4,2.9,false);
+insert into estadisticas values(null,111,1,200,50,300,22,18,18,2.52,0.25,0.01,2.9,1.7,1.6,false);
+insert into estadisticas values(null,112,1,200,50,295,19,11,20,1.54,0.25,0.01,2.3,1.2,2.7,false);
+
+create table slotsHabilidades(
+	id int,
+    slot char,
+    primary key(id)
+);
+
+insert into slotsHabilidades values (1,'q');
+insert into slotsHabilidades values (2,'w');
+insert into slotsHabilidades values (3,'e');
+insert into slotsHabilidades values (4,'r');
+
 
 create table habilidades(
 	id int auto_increment,
+    idHeroe int,
+    idSlot int,
     nombre varchar(25),
-    esPasiva boolean,
     mana int,
     recarga int,
-    primary key(id)
+    imagen varchar(30),
+    foreign key(idHeroe) references heroes(id),
+    foreign key(idSlot) references slotsHabilidades(id),
+    primary key(id)    
 );
+
+insert into habilidades values(null,1,1,'Mist Coil',80,4,'mist_coil.png');
+insert into habilidades values(null,1,2,'Aphotic Shield',115,6,'aphotic_shield.png');
+insert into habilidades values(null,1,3,'Curse of Avernus',0,0,'curse_of_avernus.png');
+insert into habilidades values(null,1,4,'Borrowed Time',0,40,'borrowed_time.png');
 
 /* Objetos */
 create table objetos(

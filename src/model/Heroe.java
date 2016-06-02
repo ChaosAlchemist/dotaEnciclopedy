@@ -5,18 +5,16 @@ public class Heroe {
     private int id;
     private String nombre;
     private String titulo;
-    private String imagen;
-    private String audio;
+    private String ruta;
 
     public Heroe() {
     }
 
-    public Heroe(int id, String nombre, String titulo, String imagen, String audio) {
+    public Heroe(int id, String nombre, String titulo, String ruta) {
         this.id = id;
         this.nombre = nombre;
         this.titulo = titulo;
-        this.imagen = imagen;
-        this.audio = audio;
+        this.ruta = ruta;
     }
 
     public int getId() {
@@ -43,20 +41,12 @@ public class Heroe {
         this.titulo = titulo;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getRuta() {
+        return ruta;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
-    }
-
-    public String getAudio() {
-        return audio;
-    }
-
-    public void setAudio(String audio) {
-        this.audio = audio;
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
     }
 
 }
