@@ -19,8 +19,7 @@ public class Data {
     public final int VIDA = 4;
     public final int MANA = 5;
     public final int VELOCIDAD = 6;
-    public final int ARMADURA = 7;
-    public final int NIVEL = 8;
+    public final int NIVEL = 7;
 
     // Constantes de Nombres
     public final int NOMBRE = 1;
@@ -33,6 +32,7 @@ public class Data {
     public final double FUERZA_POR_NIVEL = 3;
     public final double AGILIDAD_POR_NIVEL = 4;
     public final double INTELIGENCIA_POR_NIVEL = 5;
+    public final int ARMADURA = 6;
 
     // Constantes Recursos
     public final int IMAGEN = 1;
@@ -122,8 +122,6 @@ public class Data {
             q = "select mana from estadisticas where idHeroe = " + id;
         } else if (stat == VELOCIDAD) {
             q = "select velocidad from estadisticas where idHeroe = " + id;
-        }else if (stat == ARMADURA){
-            q = "select armadura from estadisticas where idHeroe = " + id;
         } else {
             q = "select nivel from estadisticas where idHeroe = " + id;
         }
@@ -139,14 +137,16 @@ public class Data {
     }
 
     public double getEstadisticasDouble(int id, double stat) throws SQLException {
-        if (stat == 1) {
+        if (stat == REGEN_HP) {
             q = "select regenV from estadisticas where idHeroe = " + id;
-        } else if (stat == 2) {
+        } else if (stat == REGEN_MANA) {
             q = "select regenM from estadisticas where idHeroe = " + id;
-        } else if (stat == 3) {
+        } else if (stat == FUERZA_POR_NIVEL) {
             q = "select nivelFue from estadisticas where idHeroe = " + id;
-        } else if (stat == 4) {
+        } else if (stat == AGILIDAD_POR_NIVEL) {
             q = "select nivelAgi from estadisticas where idHeroe = " + id;
+        } else if (stat == ARMADURA) {
+            q = "select armadura from estadisticas where idHeroe = " + id;
         } else {
             q = "select nivelInt from estadisticas where idHeroe = " + id;
         }
