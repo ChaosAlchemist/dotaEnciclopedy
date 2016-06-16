@@ -8,19 +8,19 @@ public class Objeto {
     private int fuerza;
     private int agilidad;
     private int inteligencia;
-    private String descripcion;
+    private String imagen;
 
     public Objeto() {
     }
 
-    public Objeto(int id, String nombre, int precio, int fuerza, int agilidad, int inteligencia, String descripcion) {
+    public Objeto(int id, String nombre, int precio, int fuerza, int agilidad, int inteligencia, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.fuerza = fuerza;
         this.agilidad = agilidad;
         this.inteligencia = inteligencia;
-        this.descripcion = descripcion;
+        this.imagen = imagen;
     }
 
     public int getId() {
@@ -71,12 +71,12 @@ public class Objeto {
         this.inteligencia = inteligencia;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
 }

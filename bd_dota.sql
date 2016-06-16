@@ -156,9 +156,6 @@ insert into heroes values(110,'Zharvakko','Witch Doctor','witch_doctor');
 insert into heroes values(111,'Ostarion','Wraith King','wraith_king');
 insert into heroes values(112,'Zeus','Lord of Heaven','zeus');
 
-
-
-
 /* Estadísticas de cada héroe */
 
 insert into estadisticas values(null,1,1,200,50,310,23,17,21,1.38,0.25,0.01,2.7,1.5,2,false);
@@ -284,35 +281,30 @@ insert into estadisticas values(null,110,1,200,50,305,16,13,24,0.82,0.25,0.01,1.
 insert into estadisticas values(null,111,1,200,50,300,22,18,18,2.52,0.25,0.01,2.9,1.7,1.6,false);
 insert into estadisticas values(null,112,1,200,50,295,19,11,20,1.54,0.25,0.01,2.3,1.2,2.7,false);
 
-create table slotsHabilidades(
-	id int,
-    slot char,
-    primary key(id)
-);
-
-insert into slotsHabilidades values (1,'q');
-insert into slotsHabilidades values (2,'w');
-insert into slotsHabilidades values (3,'e');
-insert into slotsHabilidades values (4,'r');
-
-
 create table habilidades(
 	id int auto_increment,
     idHeroe int,
-    idSlot int,
-    nombre varchar(25),
+    nombre varchar(50),
     mana int,
     recarga int,
     imagen varchar(30),
-    foreign key(idHeroe) references heroes(id),
-    foreign key(idSlot) references slotsHabilidades(id),
     primary key(id)    
 );
 
-insert into habilidades values(null,1,1,'Mist Coil',80,4,'mist_coil.png');
-insert into habilidades values(null,1,2,'Aphotic Shield',115,6,'aphotic_shield.png');
-insert into habilidades values(null,1,3,'Curse of Avernus',0,0,'curse_of_avernus.png');
-insert into habilidades values(null,1,4,'Borrowed Time',0,40,'borrowed_time.png');
+insert into habilidades values(null,1,'Borrowed Time',0,40,'borrowed_time.png');
+insert into habilidades values(null,2,'Chemical Rage',150,45,'chemical_rage.png');
+insert into habilidades values(null,3,'Ice Blast',225,60,'ice_blast_release.png');
+insert into habilidades values(null,4,'Mana Void',275,70,'mana_void.png');
+insert into habilidades values(null,5,'Tempest Double',0,40,'tempest_double.png');
+
+insert into habilidades values(null,7,'Fiend Grip',70,60,'fiends_grip.png');
+insert into habilidades values(null,8,'Flaming Lasso',120,40,'flaming_lasso.png');
+insert into habilidades values(null,9,'Primal Roar',110,20,'primal_roar.png');
+insert into habilidades values(null,11,'Wind Walk',25,12,'wind_walk.png');
+insert into habilidades values(null,14,'Warpath',0,0,'warpath.png');
+insert into habilidades values(null,16,'Phantasm',110,60,'phantasm.png');
+
+
 
 /* Objetos */
 create table objetos(
@@ -322,15 +314,16 @@ create table objetos(
     fuerza int,
     agilidad int,
     inteligencia int,
-    descripcion varchar(255),
+    imagen varchar(50),
     primary key(id)
 );
 
-/* Progreso actual: 3 de 158 (1,89%) */
-insert into objetos values(null, 'Corazón de Tarrasque', 5500, 45,0,0,null);
-insert into objetos values(null, 'Mariposa', 5775, 0,30,0,null);
-insert into objetos values(null, 'Guadaña de Vyse', 5650, 10,10,35,null);
-
-create table heroeCargado(
-	isCargado boolean
-);
+insert into objetos values (null,'Aghanim Scepter',4200,10,10,10,'aghanim_scepter.png');
+insert into objetos values (null,'Battle Fury',4500,25,10,0,'battle_fury.png');
+insert into objetos values (null,'Black King Bar',3975,10,0,0,'black_king_bar.png');
+insert into objetos values (null,'Butterfly',5775,0,35,0,'butterfly.png');
+insert into objetos values (null,'Daedalus',5520,24,10,2,'daedalus.png');
+insert into objetos values (null,'Heart of Tarrasque',5500,45,0,0,'heart_of_tarrasque.png');
+insert into objetos values (null,'Satanic',5900,25,5,2,'satanic.png');
+insert into objetos values (null,'Scythe of Vyse',5650,10,10,35,'scythe_of_vyse.png');
+insert into objetos values (null,'Vladmir Offering',2275,2,2,2,'vladmir_offering.png');

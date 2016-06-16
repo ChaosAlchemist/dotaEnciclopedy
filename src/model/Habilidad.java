@@ -4,7 +4,6 @@ public class Habilidad {
 
     private int id;
     private int idHeroe;
-    private int idSlot;
     private String nombre;
     private int mana;
     private int recarga;
@@ -12,10 +11,9 @@ public class Habilidad {
     public Habilidad() {
     }
 
-    public Habilidad(int id, int idHeroe, int idSlot, String nombre, int mana, int recarga) {
+    public Habilidad(int id, int idHeroe, String nombre, int mana, int recarga) {
         this.id = id;
         this.idHeroe = idHeroe;
-        this.idSlot = idSlot;
         this.nombre = nombre;
         this.mana = mana;
         this.recarga = recarga;
@@ -35,14 +33,6 @@ public class Habilidad {
 
     public void setIdHeroe(int idHeroe) {
         this.idHeroe = idHeroe;
-    }
-
-    public int getIdSlot() {
-        return idSlot;
-    }
-
-    public void setIdSlot(int idSlot) {
-        this.idSlot = idSlot;
     }
 
     public String getNombre() {

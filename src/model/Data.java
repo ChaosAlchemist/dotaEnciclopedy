@@ -12,6 +12,8 @@ public class Data {
     private String q;
     private ResultSet rs;
 
+    private List<Heroe> heroes;
+
     // Constantes de Estadísticas
     public final int FUERZA = 1;
     public final int AGILIDAD = 2;
@@ -25,6 +27,7 @@ public class Data {
     public final int NOMBRE = 1;
     public final int TITULO = 2;
     public final int RUTA = 3;
+    public final int PRECIO = 4;
 
     // Constantes Doubles
     public final double REGEN_HP = 1;
@@ -37,6 +40,8 @@ public class Data {
     // Constantes Recursos
     public final int IMAGEN = 1;
     public final int AUDIO = 2;
+    public final int RECARGA = 2;
+    public final int ID_HEROE = 3;
 
     public Data() throws SQLException {
         c = new Conexion(
@@ -64,6 +69,26 @@ public class Data {
 
     }
 
+    public List<Habilidad> getListaHabilidades() throws SQLException {
+        List<Habilidad> habilidades = new ArrayList<>();
+        Habilidad h;
+        q = "select * from habilidades";
+        rs = c.ejecutarSelect(q);
+
+        while (rs.next()) {
+            h = new Habilidad();
+            h.setId(rs.getInt(1));
+            h.setIdHeroe(rs.getInt(2));
+            h.setNombre(rs.getString(3));
+            h.setMana(rs.getInt(4));
+            h.setRecarga(rs.getInt(5));
+            habilidades.add(h);
+        }
+        c.desconectar();
+
+        return habilidades;
+    }
+
     public List<Heroe> getListaHeroes() throws SQLException {
         List<Heroe> heroes = new ArrayList<>();
         Heroe h;
@@ -81,6 +106,27 @@ public class Data {
         c.desconectar();
 
         return heroes;
+    }
+
+    public List<Objeto> getListaObjetos() throws SQLException {
+        List<Objeto> objetos = new ArrayList<>();
+        Objeto o;
+        q = "select * from objetos";
+        rs = c.ejecutarSelect(q);
+
+        while (rs.next()) {
+            o = new Objeto();
+            o.setId(rs.getInt(1));
+            o.setNombre(rs.getString(2));
+            o.setPrecio(rs.getInt(3));
+            o.setFuerza(rs.getInt(4));
+            o.setAgilidad(rs.getInt(5));
+            o.setInteligencia(rs.getInt(6));
+            o.setImagen(rs.getString(7));
+            objetos.add(o);
+        }
+        c.desconectar();
+        return objetos;
     }
 
     /**
@@ -161,21 +207,6 @@ public class Data {
         return stat;
     }
 
-    public String getHabilidad(int id, int hotkey) throws SQLException {
-        String imagen = null;
-        q = "select imagen from habilidades where idHeroe = '" + id + "' and idSlot = " + hotkey;
-
-        rs = c.ejecutarSelect(q);
-
-        if (rs.next()) {
-            imagen = rs.getString(1);
-        }
-
-        c.desconectar();
-        return imagen;
-
-    }
-
     public int actualizarStats(int id) throws SQLException {
         int vida = -15;
         q = "update estadisticas set vida = vida + (fuerza*20), mana = mana + (inteligencia*12), isCalculado = true where idHeroe ='" + id + "' and isCalculado = false";
@@ -208,5 +239,143 @@ public class Data {
         c.ejecutar(q);
 
         c.desconectar();
+    }
+
+    public void bajarNivel(int id) throws SQLException {
+        q = "update estadisticas set nivel = (nivel - 1), isCalculado = false, vida = 200, mana = 50 where idHeroe = " + id;
+        c.ejecutar(q);
+
+        q = "update estadisticas set fuerza = (fuerza - nivelFue), agilidad = (agilidad - nivelAgi), inteligencia = (inteligencia - nivelInt) where idHeroe =" + id;
+        c.ejecutar(q);
+
+        c.desconectar();
+    }
+
+    public List<Heroe> buscarHeroes(String filtro) throws SQLException {
+        heroes = new ArrayList<>();
+        Heroe h;
+
+        q = "select * from heroes where "
+                + "id like '%" + filtro + "%' or "
+                + "nombre like '%" + filtro + "%' or "
+                + "titulo like '%" + filtro + "%'";
+        rs = c.ejecutarSelect(q);
+        while (rs.next()) {
+            h = new Heroe();
+            h.setId(rs.getInt(1));
+            h.setNombre(rs.getString(2));
+            h.setTitulo(rs.getString(3));
+            heroes.add(h);
+        }
+        c.desconectar();
+        return heroes;
+    }
+
+    public Habilidad getHabilidad(int id) throws SQLException {
+        Habilidad h = null;
+        q = "select * from habilidades where id = " + id;
+        rs = c.ejecutarSelect(q);
+
+        while (rs.next()) {
+            h = new Habilidad();
+            h.setId(rs.getInt(1));
+            h.setIdHeroe(rs.getInt(2));
+            h.setNombre(rs.getString(3));
+            h.setMana(rs.getInt(4));
+            h.setRecarga(rs.getInt(5));
+        }
+
+        c.desconectar();
+        return h;
+
+    }
+
+    public Objeto getObjeto(int id) throws SQLException {
+        Objeto o = null;
+        q = "select * from objetos where id = " + id;
+        rs = c.ejecutarSelect(q);
+
+        while (rs.next()) {
+            o = new Objeto();
+            o.setId(rs.getInt(1));
+            o.setNombre(rs.getString(2));
+            o.setPrecio(rs.getInt(3));
+            o.setFuerza(rs.getInt(4));
+            o.setAgilidad(rs.getInt(5));
+            o.setInteligencia(rs.getInt(6));
+            o.setImagen(rs.getString(7));
+        }
+        c.desconectar();
+        return o;
+    }
+
+    public int getEstadisticaHabilidad(int id, int stat) throws SQLException {
+        if (stat == MANA) {
+            q = "select mana from habilidades where id = " + id;
+        } else if (stat == RECARGA) {
+            q = "select recarga from habilidades where id = " + id;
+        } else if (stat == ID_HEROE) {
+            q = "select idHeroe from habilidades where id = " + id;
+        }
+        rs = c.ejecutarSelect(q);
+        if (rs.next()) {
+            stat = rs.getInt(1);
+        }
+        c.desconectar();
+        return stat;
+
+    }
+
+    public int getEstadisticasObjetos(int id, int stat) throws SQLException {
+        if (stat == FUERZA) {
+            q = "select fuerza from objetos where id = " + id;
+        } else if (stat == AGILIDAD) {
+            q = "select agilidad from objetos where id = " + id;
+        } else if (stat == INTELIGENCIA) {
+            q = "select inteligencia from objetos where id = " + id;
+        } else if (stat == PRECIO) {
+            q = "select precio from objetos where id = " + id;
+        }
+        rs = c.ejecutarSelect(q);
+        if (rs.next()) {
+            stat = rs.getInt(1);
+        }
+        c.desconectar();
+        return stat;
+
+    }
+
+    public String getHabilidadString(int id, int tipo) throws SQLException {
+        String nombre = "";
+        if (tipo == NOMBRE) {
+            q = "select nombre from habilidades where id = " + id;
+        } else if (tipo == 2) {
+            q = "select imagen from habilidades where id = " + id;
+        }
+
+        rs = c.ejecutarSelect(q);
+
+        if (rs.next()) {
+            nombre = rs.getString(1);
+        }
+        c.desconectar();
+        return nombre;
+    }
+
+    public String getObjetoString(int id, int tipo) throws SQLException {
+        String nombre = "";
+        if (tipo == NOMBRE) {
+            q = "select nombre from objetos where id = " + id;
+        } else if (tipo == 2) {
+            q = "select imagen from objetos where id = " + id;
+        }
+
+        rs = c.ejecutarSelect(q);
+
+        if (rs.next()) {
+            nombre = rs.getString(1);
+        }
+        c.desconectar();
+        return nombre;
     }
 }
